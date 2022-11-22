@@ -1,4 +1,5 @@
-# Nuxt 3 template
+
+# Nuxt 3 template (NOTE it's a first draft and contains some old stuff)
  - tailwindcss
  - pinia
  - vueuse
