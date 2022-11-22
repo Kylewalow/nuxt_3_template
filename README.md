@@ -9,6 +9,7 @@
  - postcss
  - axios
  - headless ui
+ - nuxt auth-next
 
 ## Nuxt 3 Minimal Starter
 

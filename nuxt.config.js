@@ -91,10 +91,29 @@ export default defineNuxtConfig({
   },
 
   auth: {
-    strategies: {},
+    strategies: {
+      laravelSanctum: {
+        provider: 'laravel/sanctum',
+        url: process.env.API_URL,
+        endpoints: {
+          register: {
+            url: '/register',
+          },
+          user: {
+            url: '/user',
+          },
+        },
+      },
+    },
+    redirects: {
+      login: '/login',
+      logout: '/',
+    },
   },
 
-  router: {},
+  router: {
+    middleware: ['auth'],
+  },
 
   transition: {
     name: 'fade',
