@@ -63,7 +63,6 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@nuxt/postcss8',
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -88,27 +87,6 @@ export default defineNuxtConfig({
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: process.env.API_URL,
     credentials: true,
-  },
-
-  auth: {
-    strategies: {
-      laravelSanctum: {
-        provider: 'laravel/sanctum',
-        url: process.env.API_URL,
-        endpoints: {
-          register: {
-            url: '/register',
-          },
-          user: {
-            url: '/user',
-          },
-        },
-      },
-    },
-    redirects: {
-      login: '/login',
-      logout: '/',
-    },
   },
 
   router: {
