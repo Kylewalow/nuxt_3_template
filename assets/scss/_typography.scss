@@ -1,0 +1,16 @@
+// GENERAL TYPOGRAPHY
+@layer utilities {
+
+    // TEXT
+    .typo-400 {
+        @apply text-base leading-5;
+        @apply sm:leading-9 sm:text-3xl ;
+    }
+
+    .typo-600 {
+        @apply text-2xl leading-7;
+        @apply sm:leading-tight sm:text-6xl;
+    }
+
+}
+
