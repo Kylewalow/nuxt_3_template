@@ -56,7 +56,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-icon',
     'nuxt-lodash',
-    '@nuxtjs/auth-next',
   ],
 
   buildModules: [
@@ -64,6 +63,7 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@nuxt/postcss8',
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
