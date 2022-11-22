@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Cooken',
+    title: 'Project Name',
     htmlAttrs: {
       lang: 'en',
     },
