@@ -56,8 +56,9 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-icon',
     'nuxt-lodash',
+    '@nuxtjs/auth-next',
   ],
-  // Global CSS: https://go.nuxtjs.dev/config-css
+
   buildModules: [
     '@nuxtjs/google-fonts',
     '@nuxtjs/eslint-module',
@@ -65,9 +66,15 @@ export default defineNuxtConfig({
     '@nuxtjs/axios',
   ],
 
-  // build
+  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ['@headlessui/vue'],
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
   },
 
   families: {
@@ -84,39 +91,10 @@ export default defineNuxtConfig({
   },
 
   auth: {
-    strategies: {
-      laravelSanctum: {
-        provider: 'laravel/sanctum',
-        url: process.env.API_URL,
-        endpoints: {
-          register: {
-            url: '/register',
-          },
-          user: {
-            url: '/user',
-          },
-        },
-      },
-    },
-    redirects: {
-      login: '/login',
-      logout: '/',
-    },
+    strategies: {},
   },
 
-  router: {
-    middleware: ['auth'],
-  },
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-      },
-    },
-  },
+  router: {},
 
   transition: {
     name: 'fade',
