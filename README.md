@@ -1,5 +1,5 @@
 
-# Nuxt 3 template (NOTE it's a first draft and contains some old stuff)
+# Nuxt 3 template
  - tailwindcss
  - pinia
  - vueuse
@@ -8,9 +8,9 @@
  - nuxt google-fonts
  - eslint
  - postcss
- - axios
  - headless ui
  - nuxt auth-next
+ - laravel sanctum auth
 
 ## Nuxt 3 Minimal Starter
 

@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <NuxtWelcome />
-    <div class="font-sans">asdfasdfasdf</div>
-  </div>
+  <NuxtLayout>
+    <NuxtPage v-bind="$attrs" />
+  </NuxtLayout>
 </template>

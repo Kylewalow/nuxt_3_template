@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+// eslint-disable-next-line no-unused-vars
 
 // eslint-disable-next-line no-undef
 export default defineNuxtConfig({
@@ -11,7 +12,7 @@ export default defineNuxtConfig({
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Project Name',
+    title: 'Cooken',
     htmlAttrs: {
       lang: 'en',
     },
@@ -31,6 +32,12 @@ export default defineNuxtConfig({
     ],
   },
 
+  runtimeConfig: {
+    public: {
+      apiURL: process.env.API_URL || 'http://localhost:8000',
+    },
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/scss/app.scss'],
 
@@ -48,13 +55,13 @@ export default defineNuxtConfig({
         autoImports: [
           // automatically imports `defineStore`
           'defineStore', // import { defineStore } from 'pinia'
-          // automatically imports `defineStore` as `definePiniaStore`
-          ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
         ],
       },
     ],
     '@vueuse/nuxt',
     'nuxt-icon',
+    'nuxt-lodash',
+    'nuxt-headlessui',
     'nuxt-lodash',
   ],
 
@@ -62,12 +69,10 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/eslint-module',
     '@nuxt/postcss8',
-    '@nuxtjs/axios',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ['@headlessui/vue'],
     postcss: {
       plugins: {
         tailwindcss: {},
@@ -82,13 +87,6 @@ export default defineNuxtConfig({
     preconnect: true,
   },
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: process.env.API_URL,
-    credentials: true,
-  },
-
   router: {
     middleware: ['auth'],
   },
@@ -96,5 +94,13 @@ export default defineNuxtConfig({
   transition: {
     name: 'fade',
     mode: 'out-in',
+  },
+
+  headlessui: {
+    prefix: 'Headless',
+  },
+
+  lodash: {
+    prefix: '_',
   },
 })
