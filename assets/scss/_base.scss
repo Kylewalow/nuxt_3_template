@@ -1,13 +1,7 @@
 html {
     // font-size: clamp(16px, 1vw, 26px);
     body {
-        @apply min-h-screen antialiased w-full text-sm font-sans;
-        .vs__search {
-            @apply text-sm;
-        }
-        .vs__dropdown-toggle {
-            @apply rounded-sm;
-        }
+        @apply min-h-screen antialiased w-full font-sans;
     }
 
     input, textarea {

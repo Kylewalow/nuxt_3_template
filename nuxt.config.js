@@ -45,7 +45,7 @@ export default defineNuxtConfig({
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: ['~/components', '~/components/general', '~/components/icons'],
+  components: ['~/components', '~/components/icons'],
 
   modules: [
     '@nuxtjs/tailwindcss',
@@ -59,10 +59,8 @@ export default defineNuxtConfig({
       },
     ],
     '@vueuse/nuxt',
-    'nuxt-icon',
     'nuxt-lodash',
     'nuxt-headlessui',
-    'nuxt-lodash',
   ],
 
   buildModules: [
