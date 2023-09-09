@@ -3,14 +3,11 @@
  - tailwindcss
  - pinia
  - vueuse
- - nuxt-icon
  - nuxt-lodash
  - nuxt google-fonts
  - eslint
  - postcss
  - headless ui
- - nuxt auth-next
- - laravel sanctum auth
 
 ## Nuxt 3 Minimal Starter
 
